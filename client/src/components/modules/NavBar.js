@@ -21,7 +21,7 @@ class NavBar extends Component {
       <nav className="NavBar-container">
         <div className="NavBar-title u-inlineBlock">
           <Link to={"/"} className="NavBar-link">
-              TripPoll
+              Wellesley Query
           </Link>
         </div>
         <div className="NavBar-linkContainer u-inlineBlock">

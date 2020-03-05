@@ -35,6 +35,11 @@ class Home extends Component {
             onFailure={(err) => console.log(err)}
           />
         )}
+        <div className="home-container">
+          <div className = "home-image">
+            <h1 className = "home-title">WELLESLEY QUERY</h1>
+          </div>
+        </div>
       </>
     );
   }

@@ -6,7 +6,6 @@
 
 - Google Auth (Skeleton.js & auth.js)
 - Socket Infrastructure (client-socket.js & server-socket.js)
-  - Disclaimer: Socket isn't being taught until the second week.
 - User Model (auth.js & user.js)
 
 ## What You Need To Change

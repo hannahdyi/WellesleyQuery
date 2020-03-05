@@ -16,7 +16,9 @@
 
 /* TODO: REPLACE WITH YOUR OWN FONT! */
 @import url('https://fonts.googleapis.com/css?family=Chivo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond&display=swap');
 
 :root {
   --primary: #185566;
@@ -40,7 +42,9 @@ body {
 }
 
 h1{
-  font-family: 'Acme', "Chivo", sans-serif;
+  font-family: 'EB Garamond', serif;
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-family: 'Acme', "Chivo", sans-serif; */
 }
 
 form {
