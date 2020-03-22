@@ -21,13 +21,13 @@ class NavBar extends Component {
       <nav className="NavBar-container">
         <div className="NavBar-title u-inlineBlock">
           <Link to={"/"} className="NavBar-link">
-              Wellesley Query
+              WELLESLEY QUERY
           </Link>
         </div>
         <div className="NavBar-linkContainer u-inlineBlock">
           {this.props.userId && (
-            <Link to={`/profile/`} className="NavBar-link">
-              Your Trips
+            <Link to={`/honorcode/`} className="NavBar-link">
+              Honor Code
             </Link>
           )}
           {this.props.userId ? (
