@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import Card from "../modules/Card.js";
-import { NewStory } from "../modules/NewPostInput.js";
-
+import { NewQuestion } from "../modules/NewPostInput.js";
 import { get } from "../../utilities";
 
 class Feed extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      stories: [],
+      questions: [],
     };
   }
 
@@ -16,43 +15,43 @@ class Feed extends Component {
   // when it shows up on screen
   componentDidMount() {
     document.title = "Questions Feed";
-    get("/api/stories").then((storyObjs) => {
-      let reversedStoryObjs = storyObjs.reverse();
-      reversedStoryObjs.map((storyObj) => {
-        this.setState({ stories: this.state.stories.concat([storyObj]) });
+    get("/api/questions").then((questionObjs) => {
+      let reversedQuestionObjs = questionObjs.reverse();
+      reversedQuestionObjs.map((questionObj) => {
+        this.setState({ questions: this.state.questions.concat([questionObj]) });
       });
     });
   }
 
   // this gets called when the user pushes "Submit", so their
   // post gets added to the screen right away
-  addNewStory = (storyObj) => {
+  addNewQuestion = (questionObj) => {
     this.setState({
-      stories: [storyObj].concat(this.state.stories),
+      questions: [questionObj].concat(this.state.questions),
     });
   };
 
   render() {
-    let storiesList = null;
-    const hasStories = this.state.stories.length !== 0;
-    if (hasStories) {
-      storiesList = this.state.stories.map((storyObj) => (
+    let questionsList = null;
+    const hasQuestions = this.state.questions.length !== 0;
+    if (hasQuestions) {
+      questionsList = this.state.questions.map((questionObj) => (
         <Card
-          key={`Card_${storyObj._id}`}
-          _id={storyObj._id}
-          creator_name={storyObj.creator_name}
-          creator_id={storyObj.creator_id}
-          content={storyObj.content}
+          key={`Card_${questionObj._id}`}
+          _id={questionObj._id}
+          creator_name={questionObj.creator_name}
+          creator_id={questionObj.creator_id}
+          content={questionObj.content}
           userId={this.props.userId}
         />
       ));
     } else {
-      storiesList = <div>No stories!</div>;
+      questionsList = <div>No stories!</div>;
     }
     return (
       <>
-        {this.props.userId && <NewStory addNewStory={this.addNewStory} />}
-        {storiesList}
+        {this.props.userId && <NewQuestion addNewQuestion={this.addNewQuestion} />}
+        {questionsList}
       </>
     );
   }

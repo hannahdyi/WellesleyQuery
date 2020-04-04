@@ -12,9 +12,33 @@ body {
 
 .home-title{
     /* margin-left: 100px; */
-    font-size: 40px;
-    font-weight: 500;
+    font-size: 30px;
+    font-weight: 400;
     color: #2f95c0;
+    float:none;
+    position:static;
+    display:block;
+    margin:auto;
+    width:max-content;
+}
+
+.home-maintitle{
+    /* margin-left: 100px; */
+    font-size: 80px;
+    font-weight: 600;
+    color: #F8D7A4;
+    float:none;
+    position:static;
+    display:block;
+    margin:auto;
+    width:max-content;
+}
+
+.home-subtitle{
+    /* margin-left: 100px; */
+    font-size: 20px;
+    font-weight: 300;
+    color: #F8D7A4;
     float:none;
     position:static;
     display:block;

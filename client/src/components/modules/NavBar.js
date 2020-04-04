@@ -26,6 +26,11 @@ class NavBar extends Component {
         </div>
         <div className="NavBar-linkContainer u-inlineBlock">
           {this.props.userId && (
+            <Link to={`/feed/`} className="NavBar-link">
+              Feed
+            </Link>
+          )}
+          {this.props.userId && (
             <Link to={`/honorcode/`} className="NavBar-link">
               Honor Code
             </Link>

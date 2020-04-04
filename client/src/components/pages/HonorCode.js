@@ -5,7 +5,6 @@ import "./HonorCode.css";
 class HonorCode extends Component {
   constructor(props) {
     super(props);
-    // Initialize Default State
     this.state = {};
   }
 
@@ -13,10 +12,21 @@ class HonorCode extends Component {
     return (
       <>
       <div className="honorcode-container">
+        <br></br><br></br>
+        <br></br><br></br>
+        <br></br><br></br>
         <p>“As a Wellesley College student, I will act with </p>
         <p> honesty, integrity, and respect. In making this </p>
         <p> commitment, I am accountable to the community </p>
         <p> and dedicate myself to a life of honor.”</p>
+        <br></br><br></br>
+        <br></br><br></br>
+        <br></br><br></br>
+        <br></br><br></br>
+        <br></br><br></br>
+        <br></br><br></br>
+        <br></br><br></br>
+        <br></br><br></br>
       </div>
       </>
     );

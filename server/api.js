@@ -11,8 +11,8 @@ const express = require("express");
 
 // import models so we can interact with the database
 const User = require("./models/user");
-const Story = require("./models/story");
-const Comment = require("./models/comment");
+const Question = require("./models/question");
+const Answer = require("./models/answer");
 
 // import authentication library
 const auth = require("./auth");
@@ -49,36 +49,36 @@ router.get("/user", (req, res) => {
   });
 });
 
-router.get("/stories", (req, res) => {
+router.get("/questions", (req, res) => {
   // empty selector means get all documents
-  Story.find({}).then((stories) => res.send(stories));
+  Question.find({}).then((questions) => res.send(questions));
 });
 
-router.post("/story", auth.ensureLoggedIn, (req, res) => {
-  const newStory = new Story({
+router.post("/question", auth.ensureLoggedIn, (req, res) => {
+  const newQuestion = new Question({
     creator_id: req.user._id,
     creator_name: req.user.name,
     content: req.body.content,
   });
 
-  newStory.save().then((story) => res.send(story));
+  newQuestion.save().then((question) => res.send(question));
 });
 
-router.get("/comment", (req, res) => {
-  Comment.find({ parent: req.query.parent }).then((comments) => {
-    res.send(comments);
+router.get("/answer", (req, res) => {
+  Answer.find({ parent: req.query.parent }).then((answer) => {
+    res.send(answer);
   });
 });
 
-router.post("/comment", auth.ensureLoggedIn, (req, res) => {
-  const newComment = new Comment({
+router.post("/answer", auth.ensureLoggedIn, (req, res) => {
+  const newAnswer = new Answer({
     creator_id: req.user._id,
     creator_name: req.user.name,
     parent: req.body.parent,
     content: req.body.content,
   });
 
-  newComment.save().then((comment) => res.send(comment));
+  newAnswer.save().then((answer) => res.send(answer));
 });
 
 // router.get("/comment", (req, res) => {

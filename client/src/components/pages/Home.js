@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import GoogleLogin, { GoogleLogout } from "react-google-login";
-
 import "../../utilities.css";
 import "./Home.css";
 
@@ -16,24 +14,14 @@ class Home extends Component {
   render() {
     return (
       <>
-        {this.props.userId ? (
-          <GoogleLogout 
-            clientId={GOOGLE_CLIENT_ID}
-            buttonText="Logout"
-            onLogoutSuccess={this.props.handleLogout}
-            onFailure={(err) => console.log(err)}
-          />
-        ) : (
-          <GoogleLogin className= "loginButton"
-            clientId={GOOGLE_CLIENT_ID}
-            buttonText="Login"
-            onSuccess={this.props.handleLogin}
-            onFailure={(err) => console.log(err)}
-          />
-        )}
         <div className="home-container">
           <div className = "home-image">
-            <h1 className = "home-title">WELLESLEY QUERY</h1>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <h1 className = "home-maintitle">WELLESLEY QUERY</h1>
+            <h6 className = "home-subtitle">Post and browse questions and answers all about Wellesley College</h6>
           </div>
         </div>
       </>

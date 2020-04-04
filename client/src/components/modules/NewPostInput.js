@@ -8,8 +8,8 @@ import { post } from "../../utilities";
  *
  * Proptypes
  * @param {string} defaultText is the placeholder text
- * @param {string} storyId optional prop, used for comments
- * @param {({storyId, value}) => void} onSubmit: (function) triggered when this post is submitted, takes {storyId, value} as parameters
+ * @param {string} questionId optional prop, used for answers
+ * @param {({questionId, value}) => void} onSubmit: (function) triggered when this post is submitted, takes {storyId, value} as parameters
  */
 class NewPostInput extends Component {
   constructor(props) {
@@ -60,65 +60,48 @@ class NewPostInput extends Component {
 }
 
 /**
- * New Comment is a New Post component for comments
+ * New Answer is a New Post component for answers
  *
  * Proptypes
  * @param {string} defaultText is the placeholder text
- * @param {string} storyId to add comment to
+ * @param {string} questionId to add comment to
  */
-class NewComment extends Component {
+class NewAnswer extends Component {
   constructor(props) {
     super(props);
   }
 
-  addComment = (value) => {
-    const body = { parent: this.props.storyId, content: value };
-    post("/api/comment", body).then((comment) => {
-      // display this comment on the screen
-      this.props.addNewComment(comment);
+  addAnswer = (value) => {
+    const body = { parent: this.props.questionId, content: value };
+    post("/api/answer", body).then((answer) => {
+      // display this answer on the screen
+      this.props.addNewAnswer(answer);
     });
   };
 
   render() {
-    return <NewPostInput defaultText="New Comment" onSubmit={this.addComment} />;
+    return <NewPostInput defaultText="New Answer" onSubmit={this.addAnswer} />;
   }
 }
 
 /**
- * New Story is a New Post component for comments
+ * New Question is a New Post component for answers
  *
  * Proptypes
  * @param {string} defaultText is the placeholder text
  */
-class NewStory extends Component {
-  addStory = (value) => {
+class NewQuestion extends Component {
+  addQuestion = (value) => {
     const body = { content: value };
-    post("/api/story", body).then((story) => {
-      // display this story on the screen
-      this.props.addNewStory(story);
+    post("/api/question", body).then((question) => {
+      // display this question on the screen
+      this.props.addNewQuestion(question);
     });
   };
 
   render() {
-    return <NewPostInput defaultText="New Story" onSubmit={this.addStory} />;
+    return <NewPostInput defaultText="New QUestion" onSubmit={this.addQuestion} />;
   }
 }
 
-/**
- * New Message is a New Message component for messages
- *
- * Proptypes
- * @param {UserObject} recipient is the intended recipient
- */
-class NewMessage extends Component {
-  sendMessage = (value) => {
-    const body = { recipient: this.props.recipient, content: value };
-    post("/api/message", body);
-  };
-
-  render() {
-    return <NewPostInput defaultText="New Message" onSubmit={this.sendMessage} />;
-  }
-}
-
-export { NewComment, NewStory, NewMessage };
+export { NewAnswer, NewQuestion};

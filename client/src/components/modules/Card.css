@@ -8,26 +8,26 @@
   margin-top: var(--l);
 }
 
-.Card-story,
-.Card-commentSection {
+.Card-question,
+.Card-answerSection {
   padding: var(--m) var(--l);
 }
 
-.Card-storyUser {
+.Card-questionUser {
   font-size: 20px;
   font-weight: 600;
 }
 
-.Card-storyContent {
+.Card-questionContent {
   font-size: 40px;
   margin: var(--s) 0 0;
 }
 
-.Card-commentSection {
+.Card-answerSection {
   background-color: var(--grey);
   border-top: 1px solid var(--darkgrey);
 }
 
-.Card-commentBody {
+.Card-answerBody {
   margin: 0 0 var(--s);
 }

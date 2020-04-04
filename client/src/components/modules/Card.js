@@ -1,56 +1,56 @@
 import React, { Component } from "react";
-import SingleStory from "./SingleStory.js";
-import CommentsBlock from "./CommentsBlock.js";
+import SingleQuestion from "./SingleQuestion.js";
+import AnswersBlock from "./AnswersBlock.js";
 import { get } from "../../utilities";
 
 import "./Card.css";
 
 /**
- * Card is a component for displaying content like stories
+ * Card is a component for displaying content like questions
  *
  * Proptypes
- * @param {string} _id of the story
+ * @param {string} _id of the question
  * @param {string} creator_name
  * @param {string} creator_id
- * @param {string} content of the story
+ * @param {string} content of the question
  */
 class Card extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: [],
+      answers: [],
     };
   }
 
   componentDidMount() {
-    get("/api/comment", { parent: this.props._id }).then((comments) => {
+    get("/api/answer", { parent: this.props._id }).then((answers) => {
       this.setState({
-        comments: comments,
+        answers: answers,
       });
     });
   }
 
   // this gets called when the user pushes "Submit", so their
   // post gets added to the screen right away
-  addNewComment = (commentObj) => {
+  addNewAnswer = (answerObj) => {
     this.setState({
-      comments: this.state.comments.concat([commentObj]),
+      answers: this.state.answers.concat([answerObj]),
     });
   };
 
   render() {
     return (
       <div className="Card-container">
-        <SingleStory
+        <SingleQuestion
           _id={this.props._id}
           creator_name={this.props.creator_name}
           creator_id={this.props.creator_id}
           content={this.props.content}
         />
-        <CommentsBlock
-          story={this.props}
-          comments={this.state.comments}
-          addNewComment={this.addNewComment}
+        <AnswersBlock
+          question={this.props}
+          answers={this.state.answers}
+          addNewAnswer={this.addNewAnswer}
           userId={this.props.userId}
         />
       </div>

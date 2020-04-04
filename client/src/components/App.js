@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Router } from "@reach/router";
+import { Router, navigate } from "@reach/router";
 import NotFound from "./pages/NotFound.js";
 import Home from "./pages/Home.js";
 import NavBar from "./modules/NavBar";
@@ -36,12 +36,13 @@ class App extends Component {
     post("/api/login", { token: userToken }).then((user) => {
       this.setState({ userId: user._id });
       post("/api/initsocket", { socketid: socket.id });
-    });
+    }).then(() => {navigate(`/feed/`)});
   };
 
   handleLogout = () => {
     this.setState({ userId: undefined });
-    post("/api/logout");
+    post("/api/logout")
+    .then(() => {navigate(`/`)});
   };
 
   render() {
@@ -54,8 +55,8 @@ class App extends Component {
         />
         <Router>
           <Home path="/" userId={this.state.userId} />
-          <Feed path="/feed" userId={this.state.userId} />
-          <HonorCode path="/honorcode" userId={this.state.userId} />
+          <Feed path="/feed/" userId={this.state.userId} />
+          <HonorCode path="/honorcode/" userId={this.state.userId} />
           {/* <Profile path="/profile/" userId={this.state.userId}/>
           <TripFeed path="/tripFeed/:tripId" userId={this.state.userId}/>
           <EventDetails path="/eventDetails/:eventId" userId={this.state.userId} /> */}
