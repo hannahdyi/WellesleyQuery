@@ -80,7 +80,7 @@ class NewAnswer extends Component {
   };
 
   render() {
-    return <NewPostInput defaultText="New Answer" onSubmit={this.addAnswer} />;
+    return <NewPostInput defaultText="Post an answer" onSubmit={this.addAnswer} />;
   }
 }
 
@@ -100,7 +100,7 @@ class NewQuestion extends Component {
   };
 
   render() {
-    return <NewPostInput defaultText="New QUestion" onSubmit={this.addQuestion} />;
+    return <NewPostInput defaultText="Ask a question" onSubmit={this.addQuestion} />;
   }
 }
 

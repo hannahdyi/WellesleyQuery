@@ -18,7 +18,7 @@ class SingleQuestion extends Component {
     return (
       <div className="Card-question">
         {/* <Link to={`/profile/${this.props.creator_id}`} className="u-link u-bold"> */}
-          {this.props.creator_name}
+          {/* {this.props.creator_name} */}
         {/* </Link> */}
         <p className="Card-questionContent">{this.props.content}</p>
       </div>

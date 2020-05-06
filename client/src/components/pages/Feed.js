@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Card from "../modules/Card.js";
 import { NewQuestion } from "../modules/NewPostInput.js";
 import { get } from "../../utilities";
+import "./Feed.css";
 
 class Feed extends Component {
   constructor(props) {
@@ -50,8 +51,16 @@ class Feed extends Component {
     }
     return (
       <>
-        {this.props.userId && <NewQuestion addNewQuestion={this.addNewQuestion} />}
-        {questionsList}
+        {/* <h1>Questions</h1> */}
+        <div className="u-flex">
+          <div className="feed-subContainer feed-addQuestion" >
+            <p>Post a question!</p>
+            {this.props.userId && <NewQuestion addNewQuestion={this.addNewQuestion} />}
+          </div>
+          <div className="feed-subContainer feed-questionFeed">
+            {questionsList}
+          </div>
+        </div>
       </>
     );
   }

@@ -3,6 +3,7 @@
   font-family: "Open Sans";
   font-size: 14px;
   padding: var(--s) var(--m);
+  margin-top: var(--m);
 }
 
 .NewPostInput-input {
@@ -10,6 +11,7 @@
   border: var(--darkgrey) 1px solid;
   border-radius: var(--xs) 0 0 var(--xs);
   transition: box-shadow 0.1s;
+  margin-left: var(--m);
 }
 
 .NewPostInput-input:focus-within {
@@ -21,8 +23,9 @@
   color: var(--primary);
   border: var(--primary) 1px solid;
   border-radius: 0 var(--xs) var(--xs) 0;
-  background: none;
+  background: #F8D7A4;
   transition: color 0.1s, background 0.1s;
+  margin-right: var(--m);
 }
 
 .NewPostInput-button:hover {

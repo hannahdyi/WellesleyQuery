@@ -2,6 +2,7 @@
   border: var(--darkgrey) 1px solid;
   border-radius: var(--xs);
   margin-top: var(--m);
+  background-color: #c4c4c4;
 }
 
 .Card-container:first-of-type {
@@ -11,16 +12,20 @@
 .Card-question,
 .Card-answerSection {
   padding: var(--m) var(--l);
+  color: #19314B;
 }
 
 .Card-questionUser {
   font-size: 20px;
   font-weight: 600;
+  color: #19314B;
 }
 
 .Card-questionContent {
   font-size: 40px;
   margin: var(--s) 0 0;
+  text-align: left;
+  color: #19314B;
 }
 
 .Card-answerSection {

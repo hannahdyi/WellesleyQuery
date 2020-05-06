@@ -39,6 +39,15 @@ body {
 
 h1{
   font-family: 'EB Garamond', serif;
+  text-align: center;
+  color: #F8D7A4;
+}
+
+p {
+  font-family: 'EB Garamond', serif;
+  text-align: center;
+  color: #F8D7A4;
+  font-size: larger;
 }
 
 form {
@@ -47,6 +56,7 @@ form {
 
 .u-flex {
   display: flex;
+  background-color: #E5E5e5;
 }
 
 .u-flexColumn {
