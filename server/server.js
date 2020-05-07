@@ -35,7 +35,7 @@ const socket = require("./server-socket");
 
 // Server configuration below
 // TODO change connection URL after setting up your team database
-const mongoConnectionURL = "mongodb+srv://hyi:24232423@cluster0-gwjcv.mongodb.net/test?retryWrites=true&w=majority";
+const mongoConnectionURL = process.env.ATLAS_SRV;
 // TODO change database name to the name you chose
 // Add new trip and save it in api.js to create database name!
 const databaseName = "WellesleyQuery";
