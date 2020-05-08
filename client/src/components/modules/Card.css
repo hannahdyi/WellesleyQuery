@@ -13,6 +13,7 @@
 .Card-answerSection {
   padding: var(--m) var(--l);
   color: #19314B;
+  border-style: solid 2px;
 }
 
 .Card-questionUser {
@@ -31,8 +32,13 @@
 .Card-answerSection {
   background-color: var(--grey);
   border-top: 1px solid var(--darkgrey);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .Card-answerBody {
   margin: 0 0 var(--s);
+}
+
+html {
+  background-color: #E5E5e5;
 }

@@ -51,14 +51,17 @@ class Feed extends Component {
     }
     return (
       <>
-        {/* <h1>Questions</h1> */}
-        <div className="u-flex">
-          <div className="feed-subContainer feed-addQuestion" >
-            <p>Post a question!</p>
+        <div className="feed-div">
+          <br></br><br></br>
+          <h1 className="feed-heading">WELLESLEY COLLEGE</h1>
+          <div>
+            <div className="feed-subContainer feed-addQuestion" >
+            {/* <p className="feed-p">Ask a Question:</p> */}
             {this.props.userId && <NewQuestion addNewQuestion={this.addNewQuestion} />}
-          </div>
-          <div className="feed-subContainer feed-questionFeed">
-            {questionsList}
+            </div> 
+            <div className="feed-subContainer feed-questionFeed">
+              {questionsList}
+            </div>
           </div>
         </div>
       </>

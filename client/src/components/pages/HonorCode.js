@@ -15,6 +15,7 @@ class HonorCode extends Component {
         <br></br><br></br>
         <br></br><br></br>
         <br></br><br></br>
+        <br></br><br></br>
         <p>“As a Wellesley College student, I will act with </p>
         <p> honesty, integrity, and respect. In making this </p>
         <p> commitment, I am accountable to the community </p>

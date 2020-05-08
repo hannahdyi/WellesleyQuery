@@ -8,9 +8,11 @@
 
 .NewPostInput-input {
   flex-grow: 1;
-  border: var(--darkgrey) 1px solid;
+  border: #232730 1px solid;
   border-radius: var(--xs) 0 0 var(--xs);
   transition: box-shadow 0.1s;
+  margin-top: var(--m);
+  margin-bottom: var(--m);
   margin-left: var(--m);
 }
 
@@ -25,10 +27,16 @@
   border-radius: 0 var(--xs) var(--xs) 0;
   background: #F8D7A4;
   transition: color 0.1s, background 0.1s;
+  margin-top: var(--m);
+  margin-bottom: var(--m);
   margin-right: var(--m);
 }
 
 .NewPostInput-button:hover {
   color: var(--white);
   background-color: var(--primary);
+}
+
+html {
+  background-color: #E5E5e5;
 }
