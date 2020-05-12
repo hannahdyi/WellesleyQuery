@@ -1,52 +1,23 @@
-# Project Skeleton:
+# Wellesley Query
 
-### todo: edit README to fit project
+### Independent Study Project 
+### Hannah Yi
+### Spring 2020
 
-## What We Provide
+#### What is Wellesley Query?
 
-- Google Auth (Skeleton.js & auth.js)
-- Socket Infrastructure (client-socket.js & server-socket.js)
-- User Model (auth.js & user.js)
+Wellesley Query is a webapp created using React, Javascript, HTML, and CSS. The idea behind it is to create a platform where people can ask questions and find answers about Wellesley College. This is open to anyone, current or incoming students, parents, professors, etc. Following the Honor Code at Wellesley, all the answers and questions should follow those guidelines.
 
-## What You Need To Change
+#### Functionalities
 
-- Change the font in utilities.css
-- Change the Frontend CLIENT_ID for Google Auth (Skeleton.js) (we'll talk about it at the end of week 2)
-- Change the Server CLIENT_ID for Google Auth (auth.js) (we'll talk about it at the end of week 2)
-- Change the Database SRV for Atlas (server.js)
-- Change the Database Name for MongoDB (server.js)
-- Add a favicon to your website at the path client/dist/favicon.ico
-- Update website title in client/dist/index.html
-- Update this README file ;)
+Wellesley Query requires Google Authentication to be able to post questions or answers. On the main feed page, users are able to submit a question related to Wellesley College that will automatically get added to the feed without needing to refresh the page. Each question is posted anonymously, but the answers will show the user's Google username. Users can post multiple answers to the questions which will also show up on the page without needing to be refreshed. 
 
-## Socket Stuff
-Note: we'll be getting to this in lecture in week 2, so don't worry if you don't know it yet
+There is also a Nav Bar that has the Wellesley Query name, which brings you to the home page, Feed, which brings you to the feed page, and Honor Code, which has the Wellesley College Honor Code.
 
-- If you're not using realtime updating or don't need server->client communication, you can remove socket entirely! (server-socket.js, client-socket.js, and anything that imports them)
-- If you are using socket, consider what you want to do with the FIXME in server-socket.js
+#### What I Learned From This Project
 
+I learned and re-learned a lot from working on this project. After taking the Wintersession course in 2020, I had a pretty good understanding of React. I enjoyed working on this project so that I could re-learn React and put into use some of the things I learned from that course. I ran into some bugs occasionally but was able to overcome them by looking online or finding a loophole around them. I also learned a lot more about CSS through working on this project. I usually do not handle the aestetic parts of projects, so I found it very difficult but rewarding to work on the CSS code. I also learned a lot more about the steps it takes to deploy an app, how to keep private information safe, and how to use Google Authentication.
 
-## How to integrate into your own project
+#### Final Result
 
-On GitHub download this repository as a zip file, then extract the files into your own repository.
-Warning: make sure you copy the hidden files too: .babelrc, .gitignore, .npmrc, and .prettierrc
-
-## don't touch
-
-the following files students do not need to edit. feel free to read them if you would like.
-
-```
-client/dist/index.html
-client/src/index.js
-client/src/utilities.js
-client/src/client-socket.js
-server/validator.js
-server/server-socket.js
-.babelrc
-.npmrc
-.prettierrc
-package-lock.json
-webpack.config.js
-```
-
-## Good luck on your project :)
+The final version of the project can be found at this link https://wellesley-query.herokuapp.com/ 
